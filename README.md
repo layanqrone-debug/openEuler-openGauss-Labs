@@ -1,16 +1,28 @@
-# openEuler & openGauss DBA Training Labs 🚀
+# openEuler & openGauss DBA Training Labs 
 
 Welcome to my hands-on practice repository for administering the **openGauss Database** running on the **openEuler Enterprise Linux** platform. This repository documents a structured learning path from basic service management to advanced database administration and troubleshooting scenarios.
+
+---
+
+## 💻 Environment Specifications
+* **Operating System:** openEuler 22.03 LTS
+* **Database Engine:** openGauss 5.0.2
+* **Deployment Topology:** Single-node
+* **Installation Method:** simpleInstall
+* **Database Management Tool:** `gs_ctl`
+* **Data Directory Path:** `/opt/software/data/single_node`
 
 ---
 
 ## 📂 Laboratory Index & Progress
 
 ### 🛠️ [Lab 01: Service Management](./Lab01-Service-Management)
-Cluster-level and instance management using the openGauss Operations Manager utility (`gs_om`).
-* **Cluster Status Verification:** `gs_om -t status`
-* **Stopping the Database Cluster:** `gs_om -t stop`
-* **Starting the Database Cluster:** `gs_om -t start`
+Instance-level management and control loop cycles using the `gs_ctl` utility.
+* **Initial Status Audit:** `gs_ctl -D /opt/software/data/single_node status`
+* **Safe Service Shutdown:** `gs_ctl -D /opt/software/data/single_node stop`
+* **Post-Shutdown Verification:** `gs_ctl -D /opt/software/data/single_node status`
+* **Service Initialization:** `gs_ctl -D /opt/software/data/single_node start`
+* **Final Runtime Check:** `gs_ctl -D /opt/software/data/single_node status`
 
 ### 🔌 [Lab 02: Database Connection](./Lab02-Database-Connection)
 Establishing localized and terminal-based connections into the database engine.
@@ -41,11 +53,4 @@ Deep-dive diagnostics of the running infrastructure using native verification ut
 Simulating enterprise production environment breakdowns to practice system diagnosis and recovery.
 * **Simulated Faults:** Intentional induced environment crashes, corrupt settings, or connectivity blocks.
 * **DBA Root Cause Analysis (RCA):** Parsing error streams, reviewing logs, diagnosing underlying state failures, and executing precise remediation methods.
-
----
-
-## 💻 Environment Specifications
-* **Host Operating System:** openEuler OS
-* **Database Engine:** openGauss Management System
-* **Primary Interface Users:** `root` (OS-level adjustments) & `omm` (Database Administrator)
 *
