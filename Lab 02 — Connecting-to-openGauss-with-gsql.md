@@ -2,7 +2,7 @@
 ```bash
 /opt/software/bin/gsql -d postgres
 ```
-> `openGauss=#`
+> `openGauss=# `
 ```bash
 SELECT current_database();
 ```
@@ -47,3 +47,16 @@ SELECT current_database();
   school_department
   student
   teacher`
+6 check the table design
+```bash
+\d public.course
+```
+> `Column      Type                     Modifiers`
+   cor_id      integer                   not null `
+   cor_name    character varying(30)      not null`
+   `cor_type    character varying(20) `
+   `credit      double precision  `
+7 display the data in the 'course' table
+```bash
+SELECT * FROM public.student; 
+```
