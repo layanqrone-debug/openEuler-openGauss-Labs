@@ -7,6 +7,7 @@
 SELECT current_database();
 ```
 > `postgres`
+
 2 command to list the existing database
 ```bash
 \l
@@ -18,11 +19,13 @@ SELECT current_database();
 > template1
 >(5 rows)
 > all owned by the user omm`
+
 3 Enter to school database
 ```bash
 \c school
 ```
 > `You are now connected to database "school" as user "omm".`
+
 4 display the schemas in school database
 ```bash
 \dn
@@ -38,6 +41,7 @@ SELECT current_database();
  public
  snapshot
  sqladvisor`
+
 5 see tables inside public
 ```bash
 \dt public
@@ -47,6 +51,7 @@ SELECT current_database();
   school_department
   student
   teacher`
+
 6 check the table design
 ```bash
 \d public.course
@@ -56,7 +61,9 @@ SELECT current_database();
    cor_name    character varying(30)      not null`
    `cor_type    character varying(20) `
    `credit      double precision  `
+
 7 display the data in the 'course' table
+
 ```bash
 SELECT * FROM public.student; 
 ```
