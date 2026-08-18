@@ -58,4 +58,18 @@ ALTER ROLE
 Sysadmin, Create role, Create DB
 `
 
-7
+7 Verify privileges
+```bash
+\du lab_user
+```
+> `
+Sysadmin, Create role, Create DB
+`
+
+8 Log in to lab_user
+```bash
+/opt/software/bin/gsql -d postgres -U lab_user -W 'LabUser@123'
+```
+> `
+openGauss=>
+`
