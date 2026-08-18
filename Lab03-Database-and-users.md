@@ -68,8 +68,61 @@ Sysadmin, Create role, Create DB
 
 8 Log in to lab_user
 ```bash
+\q
 /opt/software/bin/gsql -d postgres -U lab_user -W 'LabUser@123'
 ```
 > `
 openGauss=>
 `
+
+9 CREATEROLE test
+```bash
+CREATE ROLE practice_role;
+```
+> `
+ERROR: The password could not be NULL
+ `
+> [!NOTE]
+> ** means that openGauss requires a password when creating a role **
+
+```bash
+CREATE ROLE practice_role PASSWORD 'practice@123';
+```
+> `
+CREATE ROLE
+ `
+
+10 just checking what we created
+```bash
+\du practice_role
+```
+> `
+practice_role | Cannot login | {}
+ `
+
+> [!NOTE]
+> **why cannot login even though we set a password ? Two different things:
+PASSWORD → The password to be used if the Role is permitted to log in.
+LOGIN → Allows the Role to be used as an account to connect to the database.**
+
+ 11 CREATEDB test 
+```bash
+CREATE DATABASE practice_db;
+```
+> `
+CREATE DATABASE
+ `
+
+12 display a list of databases (we should find practice_db)
+```bash
+\l
+```
+> `
+practice_db | lab_user
+ `
+
+> [!NOTE]
+> **this mean the  practice_db database created by lab_user now exists**
+
+
+
