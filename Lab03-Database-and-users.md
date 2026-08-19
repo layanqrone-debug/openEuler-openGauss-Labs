@@ -124,5 +124,25 @@ practice_db | lab_user
 > [!NOTE]
 > **this mean the  practice_db database created by lab_user now exists**
 
+13 Using the ALTER ROLE to modify role properties to assign login attribute
+```bash
+ALTER ROLE practice_role LOGIN;
+```
+> `
+ALTER ROLE 
+ `
 
+14 exite lab_user then log in using practice_role
+```bash
+\q
+```
+ > `
+[omm@opengauss ~]$
+ `
+```bash
+/opt/software/bin/gsql -d postgres -U practice_role -W 'practice@123'
+```
+ > `
+openGauss=>
+`
 
