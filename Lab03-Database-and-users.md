@@ -124,7 +124,7 @@ practice_db | lab_user
 > [!NOTE]
 > **this mean the  practice_db database created by lab_user now exists**
 
-13 Using the ALTER ROLE to modify role properties to assign login attribute
+13 Using the ALTER ROLE to modify role properties to perimtted login 
 ```bash
 ALTER ROLE practice_role LOGIN;
 ```
