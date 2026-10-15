@@ -14,7 +14,7 @@ WHERE schema_name = 'lab04';
 
 3 create table 
 ```bash 
-CREATE TABLE lab04.students (
+CREATE TABLE lab04.student (
     studend_id INT PRIMARY KEY,
     student_name VARCHAR(50),
     age INT,
@@ -44,3 +44,5 @@ VALUES
     (3, 'Maya', 20, 'Business');
 ```
 >`INSERT 0 3`
+
+7 
